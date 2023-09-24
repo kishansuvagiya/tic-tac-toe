@@ -1,0 +1,79 @@
+.btnn {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    font-size: 40px !important;
+}
+
+.tictactoe {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 25px auto;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #6c757d;
+    width: 300px;
+    margin: 25px auto;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+
+}
+
+@media screen and (min-width: 1024px) {
+    .resultmsg {
+        position: absolute;
+        top: 30%;
+        left: 72%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0px 0px 10px #6c757d;
+        width: 300px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 20px 15px;
+    }
+}
+
+.resultmsg {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px #6c757d;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px 15px;
+}
+
+.resetbtn {
+    width: 300px;
+}
+.red{
+    color: rgb(255, 70, 37) !important;
+}
+
+.green{
+    color: rgb(17, 150, 5) !important;
+}
+.lineRed {
+    border-bottom: 5px solid rgb(255, 70, 37);
+    border-radius: 5px;
+}
+
+.lineGreen {
+    border-bottom: 5px solid rgb(17, 150, 5);
+    border-radius: 5px;
+}
