@@ -20,19 +20,19 @@ function TicToecopy() {
   const clickHandler = (index) => {
     const copyarr = [...board];
 
-    
+
     if (board[index] !== '') {
       // alert('Already Clicked');
       return
     }
-    
-    
+
+
     if (clickprev == false) {
-      
+
       copyarr[index] = move;
       setBoard(copyarr);
       setMove(move == "X" ? "O" : "X")
-      
+
       if (copyarr[0] == 'X' && copyarr[1] == 'X' && copyarr[2] == 'X' ||
         copyarr[3] == 'X' && copyarr[4] == 'X' && copyarr[5] == 'X' ||
         copyarr[6] == 'X' && copyarr[7] == 'X' && copyarr[8] == 'X' ||
@@ -41,13 +41,13 @@ function TicToecopy() {
         copyarr[2] == 'X' && copyarr[5] == 'X' && copyarr[8] == 'X' ||
         copyarr[0] == 'X' && copyarr[4] == 'X' && copyarr[8] == 'X' ||
         copyarr[2] == 'X' && copyarr[4] == 'X' && copyarr[6] == 'X') {
-          setClickprev(true);
-          setWin("X Won the Game")
-          new Audio(sound).play()
-          XWins++;
-        }
-        
-        if (copyarr[0] == 'O' && copyarr[1] == 'O' && copyarr[2] == 'O' ||
+        setClickprev(true);
+        setWin("X Won the Game")
+        new Audio(sound).play()
+        XWins++;
+      }
+
+      else if (copyarr[0] == 'O' && copyarr[1] == 'O' && copyarr[2] == 'O' ||
         copyarr[3] == 'O' && copyarr[4] == 'O' && copyarr[5] == 'O' ||
         copyarr[6] == 'O' && copyarr[7] == 'O' && copyarr[8] == 'O' ||
         copyarr[0] == 'O' && copyarr[3] == 'O' && copyarr[6] == 'O' ||
@@ -55,17 +55,19 @@ function TicToecopy() {
         copyarr[2] == 'O' && copyarr[5] == 'O' && copyarr[8] == 'O' ||
         copyarr[0] == 'O' && copyarr[4] == 'O' && copyarr[8] == 'O' ||
         copyarr[2] == 'O' && copyarr[4] == 'O' && copyarr[6] == 'O') {
-          setClickprev(true);
-          setWin("O Won the Game")
-          new Audio(sound).play()
-          OWins++;
-        }
-        
-        if (copyarr.every((el) => el !== '')) {
+        setClickprev(true);
+        setWin("O Won the Game")
+        new Audio(sound).play()
+        OWins++;
+      }
+
+      else {
+        if(copyarr.every((el) => el !== '')) {
           setClickprev(true);
           setWin("The Game is Draw")
           new Audio(sound).play()
-        draw++;
+          draw++;
+        }
       }
 
     }
@@ -119,7 +121,7 @@ function TicToecopy() {
             <div className='resultmsg'>
               <h2 className=''>{win}</h2>
               <Button className='mt-3' variant="contained" color='warning' onClick={playagain} endIcon={<ReplayIcon />}>Play again</Button>
-              <img src={img} alt="" width={100} style={{marginTop : "20px"}}/>
+              <img src={img} alt="" width={100} style={{ marginTop: "20px" }} />
             </div> : null
         }
 

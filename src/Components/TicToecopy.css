@@ -45,7 +45,7 @@
 }
 
 .resultmsg {
-    margin: 20px auto;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +60,7 @@
 
 .resetbtn {
     width: 300px;
+    margin-bottom: 20px !important;
 }
 .red{
     color: rgb(255, 70, 37) !important;
